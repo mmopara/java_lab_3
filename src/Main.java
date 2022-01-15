@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,5 +17,22 @@ public class Main {
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
 
+        Osoba MO = new Osoba("Maciej", "Opara");
+        Osoba KG = new Osoba("Kamil", "Gralik");
+        Osoba KM = new Osoba("Krzysztof", "Muller");
+
+        Pracownik Pracownik1 = new Pracownik("Maciej", "Opara", "Szef");
+        Pracownik Pracownik2 = new Pracownik("Kamil", "Gralik", "Asystent");
+
+        Wynagrodzenie WynagrodzeniePracownik1 = new Wynagrodzenie("Karolina", "Pesta", "Konserwator powierzchni płaskich",3000);
+        Wynagrodzenie WynagrodzeniePracownik2 = new Wynagrodzenie("Kot", "Stefcia", "Maskotka",1);
+        Wynagrodzenie WynagrodzeniePracownik3 = new Wynagrodzenie("Pola", "Pola", "Piesiutek",200);
+
+        List<Osoba> ludziska = new ArrayList<>(List.of(
+                MO, KG, KM, Pracownik1, Pracownik2, WynagrodzeniePracownik1, WynagrodzeniePracownik2, WynagrodzeniePracownik3));
+
+        for (Osoba osoba : ludziska) {
+            System.out.println(osoba);
+        }
     }
 }
